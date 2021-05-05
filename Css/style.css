@@ -30,6 +30,7 @@ h1{
 } */
 #msg-box textarea{
     font-family: sans-serif;
+    border: 1px solid black;
     width: 100%;
     font-size: 14px;
     padding-top: 2px;
@@ -53,6 +54,7 @@ h1{
 #pass-input{
     /* margin-top: 5px; */
     font-family: sans-serif;
+    border: 1px solid black;
     font-size: 14px;
     padding-left: 5px;
     margin-left: 15px;
@@ -66,12 +68,14 @@ h1{
 .btn-encrypt{
     height: 30px;
     width:70px;
+    border: 1px solid black;
     /* margin-top: 20px; */
 }
 .btn-decrypt{
     margin-left: 10px;
     height: 30px;
     width:70px;
+    border: 1px solid black;
     /* margin-top: 20px; */
 }
 

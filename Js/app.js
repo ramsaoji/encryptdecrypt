@@ -1,8 +1,9 @@
-
+// QUERY SELECTORS
 const btnEncrypt = document.querySelector(".btn-encrypt");
 const btnDecrypt = document.querySelector(".btn-decrypt");
 const btnSha = document.querySelector(".btn-sha");
 
+// EVENT LISTENERS
 btnEncrypt.addEventListener("click", encrypt);
 btnDecrypt.addEventListener("click", decrypt);
 // btnSha.addEventListener("click", sha);
@@ -26,6 +27,8 @@ btnDecrypt.addEventListener("click", decrypt);
 //     console.log(password);
 // }
 
+
+// ENCRYPTION FUNCTION
 function encrypt(e){
     e.preventDefault();
 
@@ -54,7 +57,7 @@ function encrypt(e){
     const encrypted = CryptoJS.AES.encrypt(message, password);
     const encryptedTxt = encrypted.toString();
 
-    const doubleEncrypted = CryptoJS.AES.encrypt(encryptedTxt, password);
+    const doubleEncrypted = CryptoJS.Rabbit.encrypt(encryptedTxt, password);
 
     document.querySelector("#msg-input").value = doubleEncrypted;
     document.querySelector("#pass-input").value = "";
@@ -63,7 +66,7 @@ function encrypt(e){
 
     // var hsanot = CryptoJS.SHA1.decrypt(hash);
     // document.getElementById("original").innerHTML = CryptoJS.SHA1(hashnot);
-     }, 100)       
+     }, 50)       
 
     }
     else{
@@ -72,6 +75,7 @@ function encrypt(e){
 
 }
 
+// DECRYPTION FUNCTION
 function decrypt(e){
     e.preventDefault();
 
@@ -93,12 +97,15 @@ function decrypt(e){
     setTimeout(function(){ 
         const message = document.querySelector("#msg-input").value;
         let password = document.querySelector("#pass-input").value;
-    
-        const doubleDecrypted = CryptoJS.AES.decrypt(message, password);
-        const decryptedTxt = doubleDecrypted.toString(CryptoJS.enc.Utf8);
-    
-        const decrypted = CryptoJS.AES.decrypt(decryptedTxt, password);
         
+        try {
+            const doubleDecrypted = CryptoJS.Rabbit.decrypt(message, password);
+            var decryptedTxt = doubleDecrypted.toString(CryptoJS.enc.Utf8);
+          } catch (e) {
+            var decryptedTxt = "";
+          }
+        const decrypted = CryptoJS.AES.decrypt(decryptedTxt, password);
+ 
         // document.getElementById("demo2").innerHTML = decrypted;
         // document.getElementById("original").innerHTML = decrypted.toString(CryptoJS.enc.Utf8);
         
@@ -108,14 +115,13 @@ function decrypt(e){
         if(wrongPass == ""){
             document.getElementById("title").innerHTML = "Wrong Key Entered";
     
-            if(document.querySelector("#title").innerHTML != "Encrypt AES with SHA256 Key"){
+            if(document.querySelector("#title").innerHTML != "AES Encrypt with SHA256 Key"){
                 document.querySelector("#msg-input").value = message;
                 setTimeout(function(){ 
-                    document.getElementById("title").innerHTML = "Encrypt AES with SHA256 Key" }, 1500)
+                    document.getElementById("title").innerHTML = "AES Encrypt with SHA256 Key" }, 1500)
             }
         }
     
-        document.querySelector("#pass-input").value = ""; }, 100)
-
+        document.querySelector("#pass-input").value = ""; }, 50)
     
 }

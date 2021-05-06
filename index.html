@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="encryption_algo/aes.js"></script>
+        <script src="encryption_algo/sha256.js"></script>
+        <script src="encryption_algo/rabbit.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script> -->
+        <title>Encrypt</title>
+    </head>
+    <body>
+        <form action="">
+            <main id="container">
+                <div id="header">
+                    <h1 id="title">AES Encrypt with SHA256 Key</h1>
+                    <!-- <p>AES with SHA256 Key</p> -->
+                </div>
+                <div id="msg-box">
+                    <textarea id="msg-input" type=text placeholder="Enter your message"></textarea>
+                </div>
+                <div id="pass-box">
+                    <label for="pass-input">Enter Key:</label>
+                    <input id="pass-input" type="password" placeholder="Key more than 3 letters*" required>
+                    <!-- <input id="pass-input" type="password" placeholder="Key for Encryption/Decryption"><span><button class="btn-sha" type="submit">SHA256</button></span> -->
+                </div>
+                <div id="buttons">
+                    <button class="btn-encrypt" type="submit">Encrypt</button>
+                    <button class="btn-decrypt" type="submit">Decrypt</button>
+                </div>
+                <br>
+                <br>
+                <strong><label><span id="hash"></span></label></strong>
+                <br>
+                <br>
+                <strong><label><span id="original"></span></label></strong>
+            </main>
+        </form>
+        
+        <script src="js/app.js"></script>
+    </body>
+</html>

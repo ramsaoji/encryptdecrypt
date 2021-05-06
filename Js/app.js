@@ -108,10 +108,10 @@ function decrypt(e){
         if(wrongPass == ""){
             document.getElementById("title").innerHTML = "Wrong Key Entered";
     
-            if(document.querySelector("#title").innerHTML != "Encrypt AES & SHA256"){
+            if(document.querySelector("#title").innerHTML != "Encrypt AES with SHA256 Key"){
                 document.querySelector("#msg-input").value = message;
                 setTimeout(function(){ 
-                    document.getElementById("title").innerHTML = "Encrypt AES & SHA256" }, 1500)
+                    document.getElementById("title").innerHTML = "Encrypt AES with SHA256 Key" }, 1500)
             }
         }
     

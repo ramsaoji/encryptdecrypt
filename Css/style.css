@@ -3,12 +3,24 @@
     margin: 0;
     box-sizing: border-box;
 }
+body,html{
+    height: 100%;
+    background-color: #FAFAFA;
+}
+/* .bg{
+    height: 100%; 
+    background-image: url(/images/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
 #container{
     position: absolute;
     top: 50%;
     left: 50%;
     height: 500px;
     width: 500px;
+    background-color: #F0F0F0;
     /* margin-left: 150px; */
     /* margin-right: 150px; */
     transform: translate(-50%,-50%);
@@ -17,6 +29,8 @@
     padding: 30px;
     /* padding-left: 20px; */
     border: solid 2px black;
+    border-radius: 5px;
+    box-shadow: 3px 3px;
 }
 h1{
     text-align: center;
@@ -31,6 +45,8 @@ h1{
 #msg-box textarea{
     font-family: sans-serif;
     border: 1px solid black;
+    border-radius: 5px;
+    background-color: #FAFAFA;
     width: 100%;
     font-size: 14px;
     padding-top: 2px;
@@ -54,7 +70,9 @@ h1{
 #pass-input{
     /* margin-top: 5px; */
     font-family: sans-serif;
+    background-color: #FAFAFA;
     border: 1px solid black;
+    border-radius: 5px;
     font-size: 14px;
     padding-left: 5px;
     margin-left: 15px;
@@ -68,14 +86,18 @@ h1{
 .btn-encrypt{
     height: 30px;
     width:70px;
-    border: 1px solid black;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    background-color: #FAFAFA;
     /* margin-top: 20px; */
 }
 .btn-decrypt{
     margin-left: 10px;
     height: 30px;
     width:70px;
-    border: 1px solid black;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    background-color: #FAFAFA;
     /* margin-top: 20px; */
 }
 

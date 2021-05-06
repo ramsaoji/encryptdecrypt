@@ -113,7 +113,7 @@ function decrypt(e){
     
         let wrongPass = document.querySelector("#msg-input").value;
         if(wrongPass == ""){
-            document.getElementById("title").innerHTML = "Wrong Key Entered";
+            document.getElementById("title").innerHTML = "<span style='color: red;'>Wrong Key Entered!!!</span>";
     
             if(document.querySelector("#title").innerHTML != "AES Encrypt with SHA256 Key"){
                 document.querySelector("#msg-input").value = message;

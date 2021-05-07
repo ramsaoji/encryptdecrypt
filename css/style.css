@@ -20,7 +20,7 @@ body,html{
     display: flex;
     flex-direction: column;
     padding: 30px;
-    border: 1.2px solid #252525;
+    border: 1.5px solid #252525;
     border-radius: 10px;
     box-shadow: #009ABD 0px 2px 4px 0px, #009ABD 0px 2px 16px 0px;
 }
@@ -111,17 +111,17 @@ h1{
 }
 .btn-encrypt{
     background-color:#92cd84;
-    border: .5px solid #92cd84;
+    border: 1px solid #7CAD70;
 }
 .btn-decrypt{
     background-color:#e661b7;
-    border: .5px solid #e661b7;
+    border: 1px solid #D65AAA ;
     margin-left: 10px;
 }
 .btn-file{
     height: 35px;
     width:50%;
-    border: .5px solid #798dd7;
+    border: 1px solid #6879B8;
     border-radius: 5px;
     background-color:#798dd7;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 8px 0px;
@@ -201,8 +201,8 @@ h1{
         height: 30px;
         width: 175px;
         border-radius: 5px;
-        border: .5px solid #798dd7;
-        background-color:#798dd7;
+        /* border: .5px solid #798dd7;
+        background-color:#798dd7; */
         margin-left: 0px;
         margin-top: 15px;
         /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 2px 0px, rgba(14, 30, 37, 0.32) 0px 3px 0px 0px; */

@@ -193,22 +193,19 @@ h1{
     }
     .btn{
         height: 30px;
-        font-size: 10px;
-        /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 2px 0px, rgba(14, 30, 37, 0.32) 0px 3px 0px 0px; */
+        font-size: 12px;
     }
     .btn-file{
         display: block;
         height: 30px;
         width: 175px;
         border-radius: 5px;
-        /* border: .5px solid #798dd7;
-        background-color:#798dd7; */
         margin-left: 0px;
         margin-top: 15px;
-        /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 2px 0px, rgba(14, 30, 37, 0.32) 0px 3px 0px 0px; */
+
     }
     .btn-file a{
         text-decoration: none;
-        font-size: 10px;
+        font-size: 12px;
     }
 }

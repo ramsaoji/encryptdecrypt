@@ -5,76 +5,80 @@
 }
 body,html{
     height: 100%;
-    background-color: #FAFAFA;
+    background-color:#D3B4FF;
+    font-family: 'Raleway', sans-serif;
 }
-/* .bg{
-    height: 100%; 
-    background-image: url(/images/bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
+
 #container{
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 500px;
-    width: 500px;
-    background-color: #F0F0F0;
-    /* margin-left: 150px; */
-    /* margin-right: 150px; */
+    height: 550px;
+    width: 550px;
+    background-color: #D3B4FF;
     transform: translate(-50%,-50%);
     display: flex;
     flex-direction: column;
     padding: 30px;
-    /* padding-left: 20px; */
-    border: solid 2px black;
-    border-radius: 5px;
-    box-shadow: 3px 3px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: #A186BB 0px 2px 4px 0px, #A186BB 0px 2px 16px 0px;
 }
 h1{
     text-align: center;
-    font-size: 30px;
+    font-size: 36px;
+    font-weight: normal;
+    text-shadow: 0px 0px 1px #252525;
+    color: #252525;
 }
 #msg-box{
     margin-top: 50px;
 }
-/* #msg-box textarea:focus{
-    outline: 0;
-} */
+#msg-box textarea:hover {
+	box-shadow: inset 0 0 0 1px #AB70FF;
+}
+#msg-box textarea:focus {
+	box-shadow: inset 0 0 0 1px #AB70FF;
+	outline:0;
+}
 #msg-box textarea{
     font-family: sans-serif;
-    border: 1px solid black;
-    border-radius: 5px;
+    border: none;
+    border: .5px solid #AB70FF;
+    border-radius: 10px;
     background-color: #FAFAFA;
     width: 100%;
     font-size: 14px;
-    padding-top: 2px;
-    padding-left: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
     padding-bottom: 150px;
     resize: none;
+    box-shadow: inset 0 0 0 1.2px #AB70FF;
     overflow: hidden;
 }
 #pass-box label{
-    font-size: 18px;
+    font-size:18px;
+    font-weight: 500;
+    text-shadow: 0px 0px 1px #252525;
+    color: #252525;
 }
 #pass-box{
     display: flex;
     align-items: center;
-    /* flex-direction: column; */
     margin-top: 10%;
 }
-/* #pass-input:focus{
-    outline: 0;
-} */
+#pass-input:focus {
+	outline:0;
+}
 #pass-input{
-    /* margin-top: 5px; */
     font-family: sans-serif;
     background-color: #FAFAFA;
-    border: 1px solid black;
+    border: .5px solid #AB70FF;
+    box-shadow: inset 0 0 0 2px #AB70FF;
+    border: none;
     border-radius: 5px;
     font-size: 14px;
-    padding-left: 5px;
+    padding-left: 10px;
     margin-left: 15px;
     height: 25px;
     width: 60%;
@@ -83,22 +87,38 @@ h1{
 #buttons{
     margin-top: 10%;
 }
-.btn-encrypt{
+.btn{
+    font-size: 12px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 0.5px #3D3D3D;
+    color: #3D3D3D;
     height: 30px;
-    width:70px;
-    border: 1.5px solid black;
+    width:80px;
+    border: .5px solid #AB70FF;
     border-radius: 5px;
     background-color: #FAFAFA;
-    /* margin-top: 20px; */
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 8px 0px;
+}
+.btn:hover{
+    cursor: pointer;
 }
 .btn-decrypt{
     margin-left: 10px;
+}
+.btn-file{
     height: 30px;
-    width:70px;
-    border: 1.5px solid black;
+    width:50%;
+    border: .5px solid #AB70FF;
     border-radius: 5px;
     background-color: #FAFAFA;
-    /* margin-top: 20px; */
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 8px 0px;
+    margin-left: 60px;
+}
+.btn-file a{
+    text-decoration: none;
+    text-shadow: 0px 0px 0.5px #3D3D3D;
+    color: #3D3D3D;
+    font-size: 12px;
 }
 
 /* --------------MOBILE VIEW------------------ */
@@ -108,13 +128,14 @@ h1{
         position: absolute;
         top: 50%;
         left: 50%;
-        height: 500px;
+        height: 550px;
         width: 80%;
         transform: translate(-50%,-50%);
         display: flex;
         flex-direction: column;
         padding: 30px;
-        border: solid 2px black;
+        border-radius: 10px;
+        box-shadow: #A186BB 0px 2px 4px 0px, #A186BB 0px 2px 16px 0px;
     }
     h1{
         text-align: center;
@@ -130,51 +151,52 @@ h1{
         font-family: sans-serif;
         width: 100%;
         font-size: 12px;
-        padding-top: 2px;
-        padding-left: 5px;
+        padding-top: 8px;
+        padding-left: 8px;
+        border-radius: 7px;
         padding-bottom: 150px;
-        border: 1px solid black;
         resize: none;
         overflow: hidden;
     }
-    /* #pass-box label{
-        font-size: 12px;
+    #pass-box label{
+        font-size: 15px;
         font-weight: 500;
-    } */
+    }
     #pass-box{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        /* margin-top: 30px; */
-    }
-    #pass-input:focus{
-        outline: 0;
     }
     #pass-input{
-        /* margin-top: 5px; */
-        font-family: sans-serif;
-        border: 1px solid black;
-        font-size: 12px;
-        padding-left: 5px;
+        border-radius: 7px;
+        font-size: 10px;
+        padding-left: 8px;
         margin-top: 15px;
         margin-left: 0px;
-        height: 25px;
+        height: 30px;
         width: 100%;
     }
     #buttons{
-        margin-top: 40px;
+        margin-top: 30px;
     }
-    .btn-encrypt{
-        height: 30px;
-        width:70px;
-        border: 1px solid black;
-        /* margin-top: 20px; */
+    .btn{
+        font-size: 10px;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 2px 0px, rgba(14, 30, 37, 0.32) 0px 2px 0px 0px;
     }
-    .btn-decrypt{
-        margin-left: 10px;
+    .btn-file{
+        display: block;
         height: 30px;
-        width:70px;
-        border: 1px solid black;
-        /* margin-top: 20px; */
+        width: 175px;
+        border-radius: 5px;
+        background-color: #FAFAFA;
+        margin-left: 0px;
+        margin-top: 15px;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 2px 0px, rgba(14, 30, 37, 0.32) 0px 2px 0px 0px;
+    }
+    .btn-file a{
+        text-decoration: none;
+        text-shadow: 0px 0px 0.5px #3D3D3D;
+        color: #3D3D3D;
+        font-size: 10px;
     }
 }

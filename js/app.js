@@ -106,13 +106,14 @@ function encrypt(e){
                 document.getElementById("msg-box").innerHTML = "<textarea id='msg-input' onselect = 'blur()' placeholder='Hieee';></textarea>";
                 document.querySelector("#msg-input").value = copyText.value;
                 document.getElementById("title").innerHTML = "<h1><b>Encrypted <br>Text Copied!<b></h1>";
-                document.getElementById("msg-box").innerHTML = "<textarea id='msg-input' type='text' placeholder='Enter your secret message...'></textarea>";
+                document.getElementById("msg-box").innerHTML = 
+                "<textarea id='msg-input' type='text' placeholder='Enter your secret message or cipher text...'></textarea>";
                 document.querySelector("#msg-input").value = copyText.value;
                 btnDecrypt.disabled = true;
                 setTimeout(function(){ 
                     document.getElementById("title").innerHTML = "AES Encrypt with <br>SHA256 Key";
                     btnDecrypt.disabled = false;
-                     }, 5000);
+                     }, 3000);
             }
         
         
@@ -194,6 +195,7 @@ function decrypt(e){
          else{
         alert("Secret message can't be empty!!!");
     }
-            
+              
+    
 }
 

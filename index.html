@@ -8,7 +8,7 @@
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />
         <meta http-equiv=”refresh” content=”15″>
-        <link rel="stylesheet" type="text/css" href="css/style.css?rnd=132">
+        <link rel="stylesheet" href="css/style.css?rnd=132">
         <script src="encryption_algo/aes.js"></script>
         <script src="encryption_algo/sha256.js"></script>
         <script src="encryption_algo/rabbit.js"></script>
@@ -24,7 +24,7 @@
                     <h1 id="title">AES Encrypt with <br>SHA256 Key</h1>
                 </div>
                 <div id="msg-box">
-                    <textarea id="msg-input" type=text placeholder="Enter your secret message..."></textarea>
+                    <textarea id="msg-input" type=text placeholder="Enter your secret message or cipher text..."></textarea>
                     <!-- <button class=" btn-copy far fa-copy"></button> -->
                 </div>
                 <div id="pass-box">
@@ -44,19 +44,18 @@
                 <strong><label><span id="original"></span></label></strong> -->
             </main>
         </form>
-            
+        
+        <!-- FOR JS REFRESH -->
         </script>
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
-
-        <!-- FOR REFRESH FILES -->
         <script type="text/javascript" language="javascript">  
             var versionUpdate = (new Date()).getTime();  
             var script = document.createElement("script");  
             script.type = "text/javascript";  
             script.src = "js/app.js?v=" + versionUpdate;  
             document.body.appendChild(script);  
-        </script>
-        <script>
+        </script> 
+        <!-- FOR CSS REFRESH -->
+        <!-- <script>
             (function() {
                 var h, a, f;
                 a = document.getElementsByTagName('link');
@@ -70,7 +69,6 @@
                 } // for
                 })()
 
-        </script> 
-        <!-- <script src="js/app.js"></script> -->
+        </script>  -->
     </body>
 </html>
